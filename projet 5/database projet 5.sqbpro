@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="database projet 5.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas query browser" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1287"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="commune" custom_title="0" dock_id="1" table="4,7:maincommune"/><dock_state state="000000ff00000000fd0000000100000002000001710000030efc0100000001fc00000000000001710000013300fffffffa000000000100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000013300fffffffb000000160064006f0063006b00420072006f00770073006500320000000000ffffffff0000000000000000000001710000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="bien" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="1"/></sort><column_widths><column index="1" value="50"/><column index="2" value="111"/><column index="3" value="93"/><column index="4" value="73"/><column index="5" value="93"/><column index="6" value="54"/><column index="7" value="88"/><column index="8" value="43"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="commune" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="77"/><column index="2" value="113"/><column index="3" value="96"/><column index="4" value="234"/><column index="5" value="80"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="population" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="80"/><column index="2" value="77"/><column index="3" value="135"/><column index="4" value="166"/><column index="5" value="101"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="region" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="77"/><column index="2" value="75"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="vente" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="2" mode="1"/></sort><column_widths><column index="1" value="57"/><column index="2" value="50"/><column index="3" value="88"/><column index="4" value="92"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="voie" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="210"/><column index="2" value="50"/><column index="3" value="83"/><column index="4" value="70"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="1">SELECT COUNT(b.id_bien) AS nombre_appartements_vendus_s1_2020
+FROM bien b
+JOIN vente v ON b.id_bien = v.id_bien
+WHERE b.Type_local = 'Appartement' 
+AND v.Date_vente BETWEEN '2020-01-01' AND '2020-06-30';
+</sql><sql name="2">SELECT r.nom_region AS region_ventes,
+       COUNT(v.id_vente) AS nombre_ventes_appartement_s1_2020
+FROM vente v
+JOIN bien b ON b.id_bien = v.id_bien
+JOIN commune c ON c.id_commune = b.id_commune
+JOIN region r ON r.code_region = c.code_region
+WHERE b.Type_local = 'Appartement' AND v.Date_vente BETWEEN '2020-01-01' and '2020-06-30'
+GROUP BY r.nom_region
+ORDER BY nombre_ventes_appartement_s1_2020 DESC;
+</sql><sql name="3">SELECT 
+    b.nombre_pieces AS nombre_de_pieces,
+    CONCAT(ROUND(CAST(COUNT(v.id_vente) AS float) / SUM(COUNT(v.id_vente)) OVER () * 100, 2), '%') AS proportion_ventes_appartements
+FROM 
+    vente v
+JOIN 
+    bien b ON b.id_bien = v.id_bien
+WHERE 
+    b.Type_local = 'Appartement'
+GROUP BY 
+    b.nombre_pieces
+ORDER BY 
+    b.nombre_pieces;
+</sql><sql name="4">SELECT 
+    c.code_departement AS departement,
+    ROUND(AVG(CAST(v.Valeur AS float) / b.surface_carrez), 0) AS prix_au_m2_reel
+FROM 
+    vente v
+JOIN 
+    bien b ON v.id_bien = b.id_bien
+JOIN 
+    commune c ON b.id_commune = c.id_commune
+WHERE 
+    v.Valeur &lt;&gt; ''
+GROUP BY 
+    c.code_departement
+ORDER BY 
+    prix_au_m2_reel DESC
+LIMIT 10;
+</sql><sql name="5">SELECT 
+    r.nom_region AS region,
+    ROUND(AVG(CAST(v.Valeur AS float) / b.surface_carrez), 0) AS prix_au_m2
+FROM 
+    vente v
+JOIN 
+    bien b ON v.id_bien = b.id_bien
+JOIN 
+    commune c ON b.id_commune = c.id_commune
+JOIN 
+    region r ON c.code_region = r.code_region
+WHERE 
+    b.Type_local = 'Maison' 
+    AND r.nom_region = 'Ile-de-France'
+    AND v.Valeur &lt;&gt; ''
+
+	
+	
+	</sql><sql name="6">SELECT 
+    v.id_bien,
+    v.Valeur,
+    r.nom_region AS region,
+    b.surface_carrez AS surface_m2
+FROM 
+    vente v
+JOIN 
+    bien b ON v.id_bien = b.id_bien
+JOIN 
+    commune c ON b.id_commune = c.id_commune
+JOIN 
+    region r ON c.code_region = r.code_region
+WHERE 
+    b.Type_local = 'Appartement' 
+    AND v.Valeur &lt;&gt; ''
+ORDER BY 
+    CAST(v.Valeur AS float) DESC 
+LIMIT 10;
+</sql><sql name="7">WITH ventes_t1_2020 AS (
+    SELECT COUNT(v.id_vente) AS nb_ventes_t1_2020
+    FROM vente v 
+    WHERE v.Date_Vente BETWEEN '2020-01-01' AND '2020-03-31'
+),
+ventes_t2_2020 AS (
+    SELECT COUNT(v.id_vente) AS nb_ventes_t2_2020
+    FROM vente v 
+    WHERE v.Date_Vente BETWEEN '2020-04-01' AND '2020-06-30'
+)
+SELECT 
+    ventes_t1_2020.nb_ventes_t1_2020 AS nombre_ventes_T1_2020,
+    ventes_t2_2020.nb_ventes_t2_2020 AS nb_ventes_T2_2020,
+    CONCAT(ROUND(CAST((ventes_t2_2020.nb_ventes_t2_2020 - ventes_t1_2020.nb_ventes_t1_2020) AS float) / ventes_t1_2020.nb_ventes_t1_2020 * 100, 2), '%') AS evolution
+FROM 
+    ventes_t1_2020,
+    ventes_t2_2020;
+</sql><sql name="8">SELECT 
+    r.nom_region AS region,
+    ROUND(AVG(v.valeur / b.surface_carrez), 0) AS prix_au_m2
+FROM 
+    vente v
+JOIN 
+    bien b ON v.id_bien = b.id_bien
+JOIN 
+    commune c ON b.id_commune = c.id_commune
+JOIN 
+    region r ON c.code_region = r.code_region
+WHERE 
+    b.Type_local = 'Appartement' 
+    AND b.nombre_pieces &gt; 4 
+    AND v.Valeur &lt;&gt; ''
+GROUP BY 
+    r.nom_region
+ORDER BY 
+    prix_au_m2 DESC;
+</sql><sql name="9">SELECT 
+    c.nom_commune AS Commune,
+    COUNT(v.id_vente) AS nombre_de_vente_T1
+FROM 
+    vente v
+JOIN 
+    bien b ON v.id_bien = b.id_bien
+JOIN 
+    commune c ON b.id_commune = c.id_commune
+JOIN 
+    region r ON c.code_region = r.code_region
+WHERE 
+    v.Date_Vente BETWEEN '2020-01-01' AND '2020-03-31'
+GROUP BY 
+    c.nom_commune
+HAVING 
+    COUNT(v.id_vente) &gt;= 50
+ORDER BY 
+    nombre_de_vente_T1 DESC;
+</sql><sql name="10">WITH appart_2_pieces AS (
+    SELECT ROUND(AVG(v.Valeur / b.surface_carrez), 0) AS prix_m2_2pieces
+    FROM vente v
+    JOIN bien b ON v.id_bien = b.id_bien
+    WHERE b.Type_local = 'Appartement'
+    AND b.nombre_pieces = 2
+), 
+appart_3_pieces AS (
+    SELECT ROUND(AVG(v.Valeur / b.surface_carrez), 0) AS prix_m2_3pieces
+    FROM vente v
+    JOIN bien b ON v.id_bien = b.id_bien
+    WHERE b.Type_local = 'Appartement'
+    AND b.nombre_pieces = 3
+)
+SELECT 
+    appart_2_pieces.prix_m2_2pieces AS prix_m2_appart_2pieces,
+    appart_3_pieces.prix_m2_3pieces AS prix_m2_appart_3pieces,
+    ROUND((appart_3_pieces.prix_m2_3pieces - appart_2_pieces.prix_m2_2pieces) * 100.0 / appart_2_pieces.prix_m2_2pieces, 2) AS difference_2_et_3_pieces
+FROM 
+    appart_2_pieces,
+    appart_3_pieces;
+</sql><sql name="11*">WITH valeur_dep AS( 
+SELECT c.code_departement, c.nom_commune AS commune,
+ROUND(AVG(v.Valeur), 0) AS moyen_valeurs
+FROM vente v
+JOIN
+bien b ON v.id_bien= b.id_bien
+JOIN
+commune c ON b.id_commune = c.id_commune
+JOIN
+region r ON c.code_region = r.code_region
+WHERE c.code_departement IN ('06', '13', '33', '59', '69')
+GROUP by commune)
+SELECT * FROM (
+SELECT code_departement, commune, moyen_valeurs, RANK() OVER(PARTITION by code_departement ORDER by moyen_valeurs desc) as rang 
+FROM valeur_dep )
+WHERE rang &lt;= 3
+</sql><sql name="12">SELECT c.nom_commune AS commune,
+       ROUND(CAST(COUNT(v.id_vente) AS FLOAT) * 1000 / (p.population_municipale + p.population_comptee_a_part), 2) AS transactions_pour_1000_habitants
+FROM vente v
+JOIN bien b ON v.id_bien = b.id_bien
+JOIN commune c ON b.id_commune = c.id_commune
+JOIN region r ON c.code_region = r.code_region
+JOIN population p ON c.id_commune = p.id_commune
+WHERE (p.population_municipale + p.population_comptee_a_part) &gt; 10000
+GROUP BY c.nom_commune, p.population_municipale, p.population_comptee_a_part
+ORDER BY transactions_pour_1000_habitants DESC
+LIMIT 20;
+</sql><current_tab id="10"/></tab_sql></sqlb_project>
