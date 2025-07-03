@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet 16 – Backend Mon Vieux Grimoire | Portfolio Ruben Kraan</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; background:#f9f9f9; color:#333; line-height:1.6; }
+    header { background:#005f73; color:#fff; padding:1.5rem; text-align:center; }
+    header h1 { font-size:1.4rem; margin-bottom:.5rem; }
+    header nav a { color:#fff; text-decoration:none; margin:0 .5rem; font-size:.9rem; }
+    main { max-width:800px; margin:2rem auto; background:#fff; padding:1.5rem; border-radius:4px;
+           box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    h2 { color:#0a9396; font-size:1.6rem; margin-bottom:1rem; }
+    h3 { color:#005f73; font-size:1.2rem; margin:1.2rem 0 .6rem; }
+    p, ul { margin-bottom:1rem; }
+    ul { list-style: disc inside; }
+    a.button { display:inline-block; margin:1rem .5rem 0 0; padding:.6rem 1.2rem;
+                background:#0a9396; color:#fff; text-decoration:none; border-radius:4px; }
+    footer { text-align:center; padding:1rem 0; background:#005f73; color:#fff; margin-top:2rem; }
+    footer a { color:#fff; text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ruben Kraan – Portfolio</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="index.html#web">Projets Web</a> |
+      <a href="index.html#data">Projets Data</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Projet 16 – Développement back-end pour Mon Vieux Grimoire</h2>
+    <p><strong>Durée :</strong> 60 heures – Projet achevé</p>
+
+    <h3>Contexte</h3>
+    <p>
+      En partenariat avec Kévin (front-end React), j’ai conçu le back-end de « Mon Vieux Grimoire », 
+      un site de notation de livres pour une chaîne de librairies.  
+      Le cahier des charges précisait la création d’une API RESTful sécurisée, reliée à MongoDB.
+    </p>
+
+    <h3>Ce que j’ai réalisé</h3>
+    <ul>
+      <li>Configuration d’un serveur Express avec architecture MVC</li>
+      <li>Modélisation Mongoose des schémas : Users, Books, Ratings</li>
+      <li>Implémentation d’opérations CRUD sécurisées pour livres et notations</li>
+      <li>Système d’authentification JWT avec hash bcrypt pour les mots de passe</li>
+      <li>Gestion des uploads d’images et optimisation avec Sharp</li>
+      <li>Calcul automatique de la note moyenne des livres (aggregation pipeline)</li>
+      <li>Respect des bonnes pratiques Green Code : optimisation des requêtes et mémoire</li>
+    </ul>
+
+    <h3>Compétences acquises</h3>
+    <ul>
+      <li>Création d’API RESTful avec Node.js & Express</li>
+      <li>Modélisation et requêtes MongoDB via Mongoose</li>
+      <li>Authentification sécurisée (JWT, bcrypt)</li>
+      <li>Traitement et optimisation d’images côté serveur</li>
+      <li>Structuration MVC et organisation de projet</li>
+    </ul>
+
+    <h3>Outils & technologies</h3>
+    <ul>
+      <li>Node.js, Express</li>
+      <li>MongoDB, Mongoose</li>
+      <li>JSON Web Tokens (JWT) & bcrypt</li>
+      <li>Sharp pour optimisation d’images</li>
+      <li>Docker pour conteneurisation (optionnel)</li>
+      <li>Git & GitHub pour versioning</li>
+    </ul>
+
+    <h3>Livrables</h3>
+    <ul>
+      <li>Repo GitHub complet (code source, README, scripts de démarrage)</li>
+      <li>Documentation API (Swagger / Postman Collection)</li>
+      <li>Cahier de recette pour tester chaque endpoint</li>
+      <li>Guide de déploiement et optimisation Green Code</li>
+    </ul>
+
+    <a class="button" href="https://github.com/RubenKraan/book-rating-backend" target="_blank">
+      Voir le code sur GitHub
+    </a>
+    <a class="button" href="index.html#web">← Retour aux Projets Web</a>
+  </main>
+
+  <footer id="contact">
+    &copy; 2025 Ruben Kraan — <a href="CV_2025-06-29_Ruben_Kraan.pdf" download>
+    Télécharger mon CV</a>
+  </footer>
+
+</body>
+</html>

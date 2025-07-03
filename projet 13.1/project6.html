@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projet 6 – Optimisation des données Boutique | Portfolio</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #005f73;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: .5rem;
+      font-size: 1.4rem;
+    }
+    header nav a {
+      margin: 0 .5rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
+    }
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0a9396;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: #005f73;
+      font-size: 1.2rem;
+      margin: 1.2rem 0 .6rem;
+    }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul { list-style: disc inside; }
+    ol { list-style: decimal inside; }
+    a.button {
+      display: inline-block;
+      margin: 1rem .5rem 0 0;
+      padding: .6rem 1.2rem;
+      background: #0a9396;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #005f73;
+      color: #fff;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Projet 6</h1>
+    <nav>
+      <a href="index.html#data">← Projets Data</a> |
+      <a href="index.html">Accueil</a> |
+      <a href="https://github.com/RubenKraan/bottleneck-data-optimization" target="_blank">Voir le code sur GitHub</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Optimisation de la gestion des données d’une boutique (Bottleneck)</h2>
+    <p><strong>Durée :</strong> 70 heures</p>
+
+    <h3>Contexte</h3>
+    <p>
+      Vous êtes Data Analyst chez <em>BottleNeck</em>, un négociant en vins de prestige.  
+      Nicolas, votre manager, vous a confié la mission “DATAStock” : 
+      consolider et nettoyer plusieurs exports (ERP, site web, table de liaison) 
+      afin de produire un rapport fiable pour le comité de direction.
+    </p>
+
+    <h3>Objectifs pédagogiques</h3>
+    <ul>
+      <li>Maîtriser l’ingestion de fichiers multiples (CSV, JSON, Excel)</li>
+      <li>Réaliser des jointures complexes entre références produits</li>
+      <li>Nettoyer et transformer les données (gestion des erreurs et incohérences)</li>
+      <li>Détecter et analyser les valeurs aberrantes (Z-Score, IQR)</li>
+      <li>Calculer indicateurs clés : CA, marges, rotation de stock</li>
+      <li>Analyser corrélations pour éclairer la stratégie commerciale</li>
+      <li>Documenter un workflow reproductible dans un Notebook</li>
+    </ul>
+
+    <h3>Méthodologie</h3>
+    <ol>
+      <li><strong>Phase 1 : Préparation des données</strong>
+        <ul>
+          <li>Rassembler ERP, site web et table de liaison</li>
+          <li>Joindre les tables et aligner les SKU</li>
+          <li>Identifier 8+ types d’erreurs (saisie, calcul, typage)</li>
+          <li>Pseudonymiser et valider la conformité RGPD</li>
+        </ul>
+      </li>
+      <li><strong>Phase 2 : Analyse exploratoire</strong>
+        <ul>
+          <li>Calculer le chiffre d’affaires par produit et global</li>
+          <li>Déterminer les top références et appliquer la règle 20/80</li>
+          <li>Détecter outliers via boxplot et Z-Score</li>
+          <li>Analyser marges, rotation de stock et stocks en mois</li>
+          <li>Étudier corrélations entre prix, stock, ventes et marges</li>
+        </ul>
+      </li>
+      <li><strong>Communication</strong>
+        <ul>
+          <li>Rédaction d’un rapport clair et synthétique</li>
+          <li>Création d’un support de présentation pour le CODIR</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Résultats</h3>
+    <ul>
+      <li>Jeux de données nettoyés et consolidés</li>
+      <li>Notebook Python (ou R) commenté et structuré</li>
+      <li>Scripts ETL réutilisables (.py ou .R)</li>
+      <li>Rapport PDF détaillant les anomalies, corrections et recommandations</li>
+      <li>Présentation PowerPoint pour le comité de direction</li>
+    </ul>
+
+    <h3>Outils & technologies</h3>
+    <ul>
+      <li>Python (pandas, NumPy, SciPy) ou R (tidyverse)</li>
+      <li>Jupyter Notebook / RStudio</li>
+      <li>Git & GitHub pour versioning</li>
+      <li>Excel pour exploration initiale</li>
+    </ul>
+
+    <h3>Compétences démontrées</h3>
+    <ul>
+      <li>Consolidation et jointure de sources hétérogènes</li>
+      <li>Nettoyage avancé et conformité RGPD</li>
+      <li>Détection et interprétation des outliers</li>
+      <li>Calcul d’indicateurs business et analyse de corrélations</li>
+      <li>Documentation et communication pour dirigeants</li>
+    </ul>
+
+    <a class="button" href="https://github.com/RubenKraan/bottleneck-data-optimization" target="_blank">
+      Voir sur GitHub
+    </a>
+    <a class="button" href="index.html#data">← Retour aux Projets Data</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Ruben Kraan — <a href="CV_2025-06-29_Ruben_Kraan.pdf" download>Télécharger mon CV</a>
+  </footer>
+
+</body>
+</html>

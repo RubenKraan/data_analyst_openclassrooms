@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analyse des corrélations & CA | Portfolio Ruben Kraan</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background:#f9f9f9;
+      color:#333;
+      line-height:1.6;
+    }
+    header {
+      background:#005f73;
+      color:#fff;
+      padding:1.5rem;
+      text-align:center;
+    }
+    header h1 {
+      font-size:1.4rem;
+      margin-bottom:.5rem;
+    }
+    header nav a {
+      color:#fff;
+      text-decoration:none;
+      margin:0 .5rem;
+      font-size:.9rem;
+    }
+    main {
+      max-width:800px;
+      margin:2rem auto;
+      background:#fff;
+      padding:1.5rem;
+      border-radius:4px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color:#0a9396;
+      font-size:1.6rem;
+      margin-bottom:1rem;
+    }
+    h3 {
+      color:#005f73;
+      font-size:1.2rem;
+      margin:1.2rem 0 .6rem;
+    }
+    p, ul, ol, pre {
+      margin-bottom:1rem;
+    }
+    ul { list-style:disc inside; }
+    ol { list-style:decimal inside; }
+    pre {
+      background:#f0f0f0;
+      padding:.8rem;
+      border-radius:4px;
+      overflow-x:auto;
+    }
+    a.button {
+      display:inline-block;
+      margin:1rem .5rem 0 0;
+      padding:.6rem 1.2rem;
+      background:#0a9396;
+      color:#fff;
+      text-decoration:none;
+      border-radius:4px;
+    }
+    footer {
+      text-align:center;
+      padding:1rem 0;
+      background:#005f73;
+      color:#fff;
+      margin-top:2rem;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ruben Kraan – Portfolio</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="index.html#data">Projets Data</a> |
+      <a href="index.html#web">Projets Web</a> |
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Analyse des corrélations & chiffres d’affaires</h2>
+    <p><strong>Durée :</strong> 45 heures</p>
+
+    <h3>Contexte</h3>
+    <p>
+      Julie, cheffe de projet Marketing, m’a sollicité pour explorer plusieurs corrélations
+      issues des données de vente en ligne et produire différents graphiques autour du chiffre d’affaires.
+    </p>
+    <pre>
+Moi   : Salut Julie, je suis le nouveau Data Analyst chargé d’analyser  
+         les données de nos ventes en ligne…  
+Julie : J’aimerais que tu regardes 5 corrélations + des graphiques CA  
+Moi   : Ça marche, je m’occupe de ça !
+    </pre>
+
+    <h3>Brief de l’analyse</h3>
+    <p>Nous avons élaboré plusieurs visualisations autour du chiffre d’affaires et des profils clients :</p>
+    <ul>
+      <li>Évolution dans le temps du chiffre d’affaires avec moyenne mobile (jour / semaine / mois)</li>
+      <li>Chiffre d’affaires par catégorie de produits</li>
+      <li>Nombre de clients par mois</li>
+      <li>Nombre de transactions mensuelles</li>
+      <li>Quantité de produits vendus</li>
+      <li>Zoom sur les références : tops, flops, répartition par catégorie</li>
+      <li>Répartition du CA entre clients BtoB et BtoC</li>
+      <li>Courbe de Lorenz pour mesurer l’inégalité des ventes</li>
+      <li>Toutes autres visualisations pertinentes pour enrichir l’analyse</li>
+    </ul>
+
+    <h3>Objectifs pédagogiques</h3>
+    <ul>
+      <li>Nettoyer et enrichir le dataset clients & ventes</li>
+      <li>Calculer coefficients de corrélation (Pearson & Spearman)</li>
+      <li>Construire des visualisations adaptées : time series, bar charts, heatmaps</li>
+      <li>Interpréter les résultats et proposer des recommandations</li>
+      <li>Adapter la présentation aux parties prenantes marketing</li>
+    </ul>
+
+    <h3>Méthodologie</h3>
+    <ol>
+      <li>
+        Préparation des données  
+        <ul>
+          <li>Gestion des valeurs manquantes et typage</li>
+          <li>Encodage des variables catégorielles et tranche d’âge</li>
+        </ul>
+      </li>
+      <li>
+        Calcul des corrélations et indicateurs CA  
+        <ul>
+          <li>Utilisation de pandas, scipy et rolling() pour la moyenne mobile</li>
+          <li>Calcul de la courbe de Lorenz</li>
+        </ul>
+      </li>
+      <li>
+        Visualisation  
+        <ul>
+          <li>Time series avec moyenne mobile</li>
+          <li>Bar charts & pie charts pour CA par catégorie</li>
+          <li>Line plots pour clients/transactions</li>
+          <li>Scatter plots & heatmap pour corrélations</li>
+          <li>Lorenz curve</li>
+        </ul>
+      </li>
+      <li>
+        Rédaction du rapport  
+        <ul>
+          <li>Insights métier et recommandations stratégiques</li>
+          <li>Revue et validation avec Julie</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Ce que j’ai appris</h3>
+    <ul>
+      <li>Gestion avancée de séries temporelles (rolling averages)</li>
+      <li>Techniques d’analyse de distribution (Lorenz, Pareto)</li>
+      <li>Synthèse visuelle pour différents indicateurs CA</li>
+      <li>Présentation d’insights à un public non technique</li>
+      <li>Agilité dans l’ajustement des livrables selon feedback</li>
+    </ul>
+
+    <h3>Outils & technologies</h3>
+    <ul>
+      <li>Python (pandas, scipy, matplotlib, seaborn)</li>
+      <li>Jupyter Notebook pour documentation et code</li>
+      <li>Git & GitHub pour versioning</li>
+    </ul>
+
+    <h3>Livrables</h3>
+    <ul>
+      <li>Notebook complet et commenté</li>
+      <li>Graphiques exportés en PNG</li>
+      <li>Rapport PDF synthétique</li>
+    </ul>
+
+    <a class="button" href="https://github.com/RubenKraan/client-correlation-analysis" target="_blank">
+      Voir le code sur GitHub
+    </a>
+    <a class="button" href="index.html#data">← Retour aux Projets Data</a>
+  </main>
+  
+  <footer id="contact">
+    &copy; 2025 Ruben Kraan — <a href="CV_2025-06-29_Ruben_Kraan.pdf" download>Télécharger mon CV</a>
+  </footer>
+
+</body>
+</html>

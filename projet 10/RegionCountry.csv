@@ -14,7 +14,7 @@ Europe,Bosnia and Herzegovina
 Africa,Botswana
 Americas,Brazil
 Europe,Bulgaria
-Western Pacific,Cambodia
+South-East Asia,Cambodia
 Americas,Canada
 Americas,Chile
 Western Pacific,China
@@ -25,7 +25,7 @@ Europe,Croatia
 Europe,Cyprus
 Europe,Czechia
 Africa,Côte d'Ivoire
-South-East Asia,Democratic People's Republic of Korea
+Western Pacific,Democratic People's Republic of Korea
 Europe,Denmark
 Americas,Ecuador
 Americas,El Salvador
@@ -48,26 +48,26 @@ South-East Asia,India
 Eastern Mediterranean,Iran (Islamic Republic of)
 Eastern Mediterranean,Iraq
 Europe,Ireland
-Europe,Israel
+Eastern Mediterranean,Israel
 Europe,Italy
 Western Pacific,Japan
 Eastern Mediterranean,Jordan
 Europe,Kazakhstan
 Africa,Kenya
 Eastern Mediterranean,Kuwait
-Europe,Kyrgyzstan
-Western Pacific,Lao People's Democratic Republic
+Eastern Mediterranean,Kyrgyzstan
+South-East Asia,Lao People's Democratic Republic
 Europe,Latvia
 Eastern Mediterranean,Lebanon
 Europe,Lithuania
 Europe,Luxembourg
-Western Pacific,Malaysia
+South-East Asia,Malaysia
 Europe,Malta
 Americas,Mexico
 Europe,Monaco
 Western Pacific,Mongolia
 Europe,Montenegro
-Eastern Mediterranean,Morocco
+Africa,Morocco
 South-East Asia,Nepal
 Europe,Netherlands
 Western Pacific,New Zealand
@@ -93,7 +93,7 @@ Western Pacific,Samoa
 Europe,San Marino
 Europe,Serbia
 Africa,Sierra Leone
-Western Pacific,Singapore
+South-East Asia,Singapore
 Europe,Slovakia
 Europe,Slovenia
 Africa,South Africa
@@ -101,9 +101,9 @@ Europe,Spain
 South-East Asia,Sri Lanka
 Europe,Sweden
 Europe,Switzerland
-Europe,Tajikistan
-Eastern Mediterranean,Tunisia
-Europe,Turkmenistan
+Eastern Mediterranean,Tajikistan
+Africa,Tunisia
+Eastern Mediterranean,Turkmenistan
 Western Pacific,Tuvalu
 Africa,Uganda
 Europe,Ukraine
@@ -111,7 +111,7 @@ Europe,United Kingdom of Great Britain and Northern Ireland
 Africa,United Republic of Tanzania
 Americas,United States of America
 Americas,Uruguay
-Europe,Uzbekistan
+Eastern Mediterranean,Uzbekistan
 Western Pacific,Vanuatu
 Africa,Zambia
 Eastern Mediterranean,Afghanistan
@@ -124,7 +124,7 @@ Americas,Barbados
 Americas,Belize
 Africa,Benin
 Americas,Bolivia (Plurinational State of)
-Western Pacific,Brunei Darussalam
+South-East Asia,Brunei Darussalam
 Africa,Burkina Faso
 Africa,Burundi
 Africa,Cabo Verde
@@ -135,10 +135,10 @@ Africa,Comoros
 Western Pacific,Cook Islands
 Americas,Cuba
 Africa,Democratic Republic of the Congo
-Eastern Mediterranean,Djibouti
+Africa,Djibouti
 Americas,Dominica
 Americas,Dominican Republic
-Eastern Mediterranean,Egypt
+Africa,Egypt
 Africa,Equatorial Guinea
 Africa,Eritrea
 Western Pacific,Fiji
@@ -152,7 +152,7 @@ Americas,Jamaica
 Western Pacific,Kiribati
 Africa,Lesotho
 Africa,Liberia
-Eastern Mediterranean,Libya
+Africa,Libya
 Africa,Madagascar
 Africa,Malawi
 South-East Asia,Maldives
@@ -177,9 +177,9 @@ Eastern Mediterranean,Saudi Arabia
 Africa,Senegal
 Africa,Seychelles
 Western Pacific,Solomon Islands
-Eastern Mediterranean,Somalia
+Africa,Somalia
 Africa,South Sudan
-Eastern Mediterranean,Sudan
+Africa,Sudan
 Americas,Suriname
 Eastern Mediterranean,Syrian Arab Republic
 South-East Asia,Thailand
@@ -190,6 +190,6 @@ Americas,Trinidad and Tobago
 Europe,Turkey
 Eastern Mediterranean,United Arab Emirates
 Americas,Venezuela (Bolivarian Republic of)
-Western Pacific,Viet Nam
+South-East Asia,Viet Nam
 Eastern Mediterranean,Yemen
 Africa,Zimbabwe

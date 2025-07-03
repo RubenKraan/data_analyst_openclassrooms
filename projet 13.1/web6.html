@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet 15 – Application immobilière React | Portfolio Ruben Kraan</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; background:#f9f9f9; color:#333; line-height:1.6; }
+    header { background:#005f73; color:#fff; padding:1.5rem; text-align:center; }
+    header h1 { font-size:1.4rem; margin-bottom:.5rem; }
+    header nav a { color:#fff; text-decoration:none; margin:0 .5rem; font-size:.9rem; }
+    main { max-width:800px; margin:2rem auto; background:#fff; padding:1.5rem; border-radius:4px;
+           box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    h2 { color:#0a9396; font-size:1.6rem; margin-bottom:1rem; }
+    h3 { color:#005f73; font-size:1.2rem; margin:1.2rem 0 .6rem; }
+    p, ul, ol { margin-bottom:1rem; }
+    ul { list-style: disc inside; }
+    ol { list-style: decimal inside; }
+    a.button { display:inline-block; margin:1rem .5rem 0 0; padding:.6rem 1.2rem;
+                background:#0a9396; color:#fff; text-decoration:none; border-radius:4px; }
+    footer { text-align:center; padding:1rem 0; background:#005f73; color:#fff; margin-top:2rem; }
+    footer a { color:#fff; text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ruben Kraan – Portfolio</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="index.html#web">Projets Web</a> |
+      <a href="index.html#data">Projets Data</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Projet 15 – Application de location immobilière avec React</h2>
+    <p><strong>Durée :</strong> 60 heures – Projet achevé</p>
+
+    <h3>Contexte</h3>
+    <p>
+      En freelance pour Kasa, leader de la location d’appartements entre particuliers,
+      j’ai repris le front-end legacy ASP.NET pour le réécrire en React.  
+      Laura, la CTO, m’a fourni les maquettes Figma, les guidelines de code et un JSON
+      simulant les 20 dernières annonces. Avec Vite et React Router, j’ai mis en place
+      une SPA moderne, responsive et modulaire.
+    </p>
+
+    <h3>Ce que j’ai réalisé</h3>
+    <ul>
+      <li>Initialisation du projet avec Vite + React (ES6/Eslint/Prettier)</li>
+      <li>Configuration de React Router pour gérer trois pages principales (Accueil, Logement, 404)</li>
+      <li>Développement de composants : Header, Footer, Card, Gallery, Collapse</li>
+      <li>Implémentation de la galerie : navigation circulaire et découpe centrée des images</li>
+      <li>Création du composant Collapse avec état ouvert/fermé et animations CSS</li>
+      <li>Intégration des données JSON, gestion des routes dynamiques (useParams)</li>
+      <li>Tests de réactivité et optimisation pour mobile, tablette et desktop</li>
+      <li>Respect des coding guidelines Kasa et déploiement sur Netlify</li>
+    </ul>
+
+    <h3>Compétences acquises</h3>
+    <ul>
+      <li>Maîtrise de React (hooks, props, state) et structuration d’une SPA</li>
+      <li>Gestion des routes avec React Router v6</li>
+      <li>SASS pour styles modulaires et animations CSS</li>
+      <li>Appels et rendu de données statiques via JSON</li>
+      <li>Coordination front-end/UI design avec Figma et équipe produit</li>
+    </ul>
+
+    <h3>Outils & technologies</h3>
+    <ul>
+      <li>React & React Router</li>
+      <li>Vite (bundler ultra-rapide)</li>
+      <li>Node.js & npm</li>
+      <li>SASS pour la gestion des styles</li>
+      <li>Figma pour l’obtention des maquettes et ressources</li>
+      <li>Git & GitHub pour versioning et CI/CD</li>
+    </ul>
+
+    <h3>Livrables</h3>
+    <ul>
+      <li>Repo GitHub complet (setup, composants, styles, tests)</li>
+      <li>Application déployée en production (Netlify)</li>
+      <li>Documentation technique (README, guidelines, scripts)</li>
+      <li>Guide de déploiement et de maintenance</li>
+    </ul>
+
+    <a class="button" href="https://github.com/RubenKraan/kasa-react-app" target="_blank">
+      Voir le projet sur GitHub
+    </a>
+    <a class="button" href="index.html#web">← Retour aux Projets Web</a>
+  </main>
+
+  <footer id="contact">
+    &copy; 2025 Ruben Kraan — <a href="CV_2025-06-29_Ruben_Kraan.pdf" download>
+    Télécharger mon CV</a>
+  </footer>
+
+</body>
+</html>

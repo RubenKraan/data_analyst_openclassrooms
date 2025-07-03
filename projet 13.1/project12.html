@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projet 13 – Détection de faux billets | Portfolio Ruben Kraan</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background:#f9f9f9;
+      color:#333;
+      line-height:1.6;
+    }
+    header {
+      background:#005f73;
+      color:#fff;
+      padding:1.5rem;
+      text-align:center;
+    }
+    header h1 {
+      font-size:1.4rem;
+      margin-bottom:.5rem;
+    }
+    header nav a {
+      color:#fff;
+      text-decoration:none;
+      margin:0 .5rem;
+      font-size:.9rem;
+    }
+    main {
+      max-width:800px;
+      margin:2rem auto;
+      background:#fff;
+      padding:1.5rem;
+      border-radius:4px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color:#0a9396;
+      font-size:1.6rem;
+      margin-bottom:1rem;
+    }
+    h3 {
+      color:#005f73;
+      font-size:1.2rem;
+      margin:1.2rem 0 .6rem;
+    }
+    p, ul, ol {
+      margin-bottom:1rem;
+    }
+    ul { list-style:disc inside; }
+    ol { list-style:decimal inside; }
+    a.button {
+      display:inline-block;
+      margin:1rem .5rem 0 0;
+      padding:.6rem 1.2rem;
+      background:#0a9396;
+      color:#fff;
+      text-decoration:none;
+      border-radius:4px;
+    }
+    footer {
+      text-align:center;
+      padding:1rem 0;
+      background:#005f73;
+      color:#fff;
+      margin-top:2rem;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ruben Kraan – Portfolio</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="index.html#data">Projets Data</a> |
+      <a href="index.html#web">Projets Web</a> |
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Projet 13 – Détection de faux billets avec R / Python</h2>
+    <p><strong>Durée :</strong> 70 heures – Projet achevé</p>
+
+    <h3>Contexte</h3>
+    <p>
+      L’ONCFM (Organisation nationale de lutte contre le faux-monnayage) m’a confié la
+      conception d’un modèle de machine learning capable, après analyse de  
+      caractéristiques (longueur, largeur, épaisseur, etc.), de distinguer vrais et  
+      faux billets en euros.
+    </p>
+
+    <h3>Ce que j’ai réalisé</h3>
+    <ul>
+      <li>Exploration & visualisation des données de 1 500 billets (1 000 vrais, 500 faux)</li>
+      <li>Prétraitement : nettoyage, normalisation et sélection de features</li>
+      <li>Test de 4 algorithmes : K-means, régression logistique, KNN, Random Forest</li>
+      <li>Évaluation par cross-validation et comparaison des métriques (précision, rappel, F1)</li>
+      <li>Sélection et déploiement du meilleur modèle (Random Forest)</li>
+      <li>Développement d’une application de prédiction dans un notebook séparé</li>
+      <li>Rédaction d’un support final présentant la méthodologie, les résultats et recommandations</li>
+    </ul>
+
+    <h3>Compétences acquises</h3>
+    <ul>
+      <li>Construction de pipelines ML : EDA, feature engineering, modélisation</li>
+      <li>Comparaison et optimisation d’algorithmes supervisés et non supervisés</li>
+      <li>Validation et interprétation des métriques de classification</li>
+      <li>Packaging d’une application de prédiction (notebook interactif)</li>
+      <li>Communication des résultats à un public non technique</li>
+    </ul>
+
+    <h3>Méthodologie</h3>
+    <ol>
+      <li>Exploration des variables et détection des anomalies</li>
+      <li>Normalisation et codage des features numériques</li>
+      <li>Implémentation de K-means pour segmentation exploratoire</li>
+      <li>Entraînement & évaluation de régression logistique, KNN, Random Forest</li>
+      <li>Choix du modèle final et analyse des importances de variables</li>
+      <li>Construction d’un notebook “applicatif” pour prédiction en temps réel</li>
+    </ol>
+
+    <h3>Outils & technologies</h3>
+    <ul>
+      <li>Python (pandas, scikit-learn, matplotlib, seaborn) ou R (tidyverse, caret)</li>
+      <li>Jupyter Notebook / RStudio</li>
+      <li>Git & GitHub pour versioning des notebooks</li>
+      <li>Docker (optionnel) pour containerisation de l’application</li>
+    </ul>
+
+    <h3>Livrables</h3>
+    <ul>
+      <li>Notebook EDA & modélisation</li>
+      <li>Notebook applicatif de prédiction</li>
+      <li>Support de présentation (PDF/PPT)</li>
+      <li>Code source sur GitHub</li>
+    </ul>
+
+    <a class="button" href="https://github.com/RubenKraan/counterfeit-note-detection" target="_blank">
+      Voir le projet sur GitHub
+    </a>
+    <a class="button" href="index.html#data">← Retour aux Projets Data</a>
+  </main>
+
+  <footer id="contact">
+    &copy; 2025 Ruben Kraan — <a href="CV_2025-06-29_Ruben_Kraan.pdf" download>Télécharger mon CV</a>
+  </footer>
+
+</body>
+</html>

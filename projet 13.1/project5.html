@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projet 5 – DATAImmo | Portfolio Ruben Kraan</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height:1.6;
+    }
+    header {
+      background: #005f73;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: .5rem;
+      font-size: 1.4rem;
+    }
+    header nav a {
+      margin: 0 .5rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
+    }
+    section {
+      max-width: 800px;
+      background: #fff;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 { color:#0a9396; font-size:1.6rem; margin-bottom:1rem; }
+    h3 { color:#005f73; margin-top:1.2rem; margin-bottom:.6rem; font-size:1.2rem; }
+    p, ul, ol { margin-bottom:1rem; }
+    ul { list-style: disc inside; }
+    ol { list-style: decimal inside; }
+    a.button {
+      display: inline-block;
+      margin-top:1.5rem;
+      padding:.6rem 1.2rem;
+      background:#0a9396;
+      color:#fff;
+      text-decoration:none;
+      border-radius:4px;
+    }
+    footer {
+      text-align:center;
+      padding:1rem 0;
+      background:#005f73;
+      color:#fff;
+      margin-top:2rem;
+    }
+    footer a {
+      color:#fff;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ruben Kraan – Portfolio</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="index.html#data">Projets Data</a> |
+      <a href="index.html#web">Projets Web</a> |
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Projet 5 – DATAImmo : Modélisation d’une base de données immobilière</h2>
+    <p><strong>Durée :</strong> 60 heures</p>
+
+    <h3>Pourquoi ce projet ?</h3>
+    <p>
+      DATAImmo est un projet stratégique de <em>Laplace Immo</em>, un réseau national d’agences immobilières.  
+      La CTO, Clara Daucourt, m’a confié la refonte du modèle de données pour intégrer les transactions foncières,  
+      les recensements INSEE et le référentiel géographique français — tout en garantissant la conformité RGPD.
+    </p>
+
+    <h3>En quoi ces compétences sont importantes</h3>
+    <p>
+      Créer, normaliser et maintenir une base relationnelle ; assurer son intégrité ; rédiger des scripts SQL :  
+      ces activités sont au cœur du métier de Data Analyst et BI Analyst.
+    </p>
+
+    <h3>Méthodologie</h3>
+    <ol>
+      <li><strong>Dictionnaire de données</strong>  
+        <ul>
+          <li>Template fourni : code, type, longueur, règles RGPD</li>
+          <li>Remplissage pour DVF, INSEE, géographie</li>
+        </ul>
+      </li>
+      <li><strong>Schéma relationnel</strong>  
+        <ul>
+          <li>Adaptation UML en 3NF pour intégrer population et régions</li>
+          <li>Justification des clés primaires/étrangères</li>
+        </ul>
+      </li>
+      <li><strong>Implémentation SGBD</strong>  
+        <ul>
+          <li>Choix de SQLite Studio</li>
+          <li>Script SQL CREATE / chargement CSV</li>
+          <li>Vérification d’intégrité & volume de données</li>
+        </ul>
+      </li>
+      <li><strong>Validation & présentation</strong>  
+        <ul>
+          <li>Document technique complet</li>
+          <li>Workshop de validation avec la CTO</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Résultats</h3>
+    <ul>
+      <li>Dictionnaire RGPD-compliant (Excel)</li>
+      <li>Schéma UML exporté (PNG)</li>
+      <li>Script SQL commenté (create_dataimmo.sql)</li>
+      <li>Présentation de validation (PDF)</li>
+    </ul>
+
+    <h3>Outils & technologies</h3>
+    <ul>
+      <li>SQLite Studio</li>
+      <li>Excel & Power Query</li>
+      <li>Visual Studio Code</li>
+    </ul>
+
+    <h3>Compétences démontrées</h3>
+    <ul>
+      <li>Conception et normalisation de bases relationnelles</li>
+      <li>Implémentation et contrôle d’intégrité des données</li>
+      <li>Documentation technique et animation de workshop</li>
+    </ul>
+
+    <a class="button" href="https://github.com/RubenKraan/DATAImmo-DB-model" target="_blank">
+      Voir le code sur GitHub
+    </a>
+    <a class="button" href="index.html#data">← Retour aux Projets Data</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Ruben Kraan — <a href="CV_2025-06-29_Ruben_Kraan.pdf" download>Télécharger mon CV</a>
+  </footer>
+
+</body>
+</html>

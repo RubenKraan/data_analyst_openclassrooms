@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruben Kraan – Portfolio</title>
+  <style>
+   * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background: #005f73;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header nav a, nav a {
+      margin: 0 0.5rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+header nav ul li {
+  display: inline;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  background: #0a9396;
+}
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      color: #0a9396;
+      margin-bottom: 1rem;
+    }
+    .filters {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .filters label { margin-right: 1rem; cursor: pointer; }
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    .skills-table th,
+    .skills-table td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+    }
+    .skills-table th {
+      background: #e9d8a6;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 600px) {
+      .projects { grid-template-columns: 1fr 1fr; }
+    }
+    .project {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform .2s;
+      padding: 1rem;
+    }
+    .project a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    .project:hover { transform: translateY(-4px); }
+    .project h3 { margin-bottom: 0.5rem; color: #005f73; }
+    .project ul {
+      list-style: disc inside;
+      margin-top: 0.5rem;
+    }
+    .timeline {
+      list-style: none;
+      padding-left: 1rem;
+      border-left: 3px solid #0a9396;
+      margin-bottom: 2rem;
+    }
+    .timeline li {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+    }
+    .timeline li:before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 3px;
+      width: 12px;
+      height: 12px;
+      background: #0a9396;
+      border-radius: 50%;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #005f73;
+      color: #fff;
+      margin-top: 3rem;
+    }
+    a.download-cv {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #0a9396;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+     .gantt-chart {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+  }
+  .gantt-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .label {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  .bar-container {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    position: relative;
+    height: 25px;
+  }
+  .bar {
+    position: absolute;
+    height: 100%;
+    background-color: #4285f4;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    overflow: hidden;
+    white-space: nowrap;}
+
+  </style>
+</head>
+<body>
+
+  <header>
+  <h1>Ruben Kraan</h1>
+  <p>Multilingual Data Analyst & Web Developer turning data into strategic insights and interfaces</p>
+  <nav>
+    <ul style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem;">
+      <li><a href="#about">About</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#skills">Data Skills</a></li>
+      <li><a href="#data">Data Projects</a></li>
+      <li><a href="#web-dev-skills">Web Skills</a></li>
+      <li><a href="#web">Web Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Born on December 3, 2000, I’m a trilingual Data Analyst & Web Developer (FR/EN/NL) with a driving licence (B) and open to remote work. 
+       Passionate about transforming complex datasets into growth and innovation drivers, I leverage Python, SQL, Power BI and KNIME for cleaning, modeling and visualization. 
+       With solid front-end and back-end skills (HTML5, CSS, JavaScript, React, Node.js), I build responsive, SEO-friendly web interfaces and REST APIs. 
+       Previously I advised leadership teams as a Strategic Consultant at Spirare, honing my strategic decision-making and stress-management under pressure.</p>
+
+    <a class="download-cv" href="CV_2025-06-29_Ruben_Kraan.pdf" download>
+      ↓ Download my CV (PDF)
+    </a>
+  </section>
+
+<section id="timeline"><h2>Professional & Educational Timeline</h2>
+<div class="gantt-chart">
+  <div class="gantt-row">
+    <div class="label">Strategic Consultant (Spirare)</div>
+    <div class="bar-container">
+      <div class="bar" style="left: 0%; width: 77%;">Jan 2017 – Jan 2024</div>
+    </div>
+  </div>
+  <div class="gantt-row">
+    <div class="label">Diploma in Construction Managment (Mosa-rt)</div>
+    <div class="bar-container">
+      <div class="bar" style="left: 9%; width: 23%;">Sep 2017 – Jun 2020</div>
+    </div>
+  </div>
+  <div class="gantt-row">
+    <div class="label">Degree in Architecture (UHasselt)</div>
+    <div class="bar-container">
+      <div class="bar" style="left: 38%; width: 8%;">Sep 2020 – Aug 2021</div>
+    </div>
+  </div>
+  <div class="gantt-row">
+    <div class="label">Receptionist (Valmouriane)</div>
+    <div class="bar-container">
+      <div class="bar" style="left: 69%; width: 3%;">Jun 2022 – Sep 2022</div>
+    </div>
+  </div>
+  <div class="gantt-row">
+    <div class="label">Web Developer Certification (OpenClassrooms)</div>
+    <div class="bar-container">
+      <div class="bar" style="left: 71%; width: 16%;">Nov 2022 – May 2024</div>
+    </div>
+  </div>
+  <div class="gantt-row">
+    <div class="label">Data Analyst Certification (OpenClassrooms)</div>
+    <div class="bar-container">
+      <div class="bar" style="left: 89%; width: 11%;">Sep 2024 – Aug 2025</div>
+    </div>
+  </div>
+</div>
+</section>
+  <section id="skills">
+    <h2>Core Data Skills</h2>
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Soft Skills</th>
+          <th>Tools & Languages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Problem-solving<br/>Adaptability<br/>Logical reasoning<br/>Strategic decision-making<br/>Stress management</td>
+          <td>Python, R<br/>SQL (MySQL, PostgreSQL)<br/>Power BI, Tableau<br/>KNIME, Pandas, NumPy, Matplotlib<br/>Seaborn, DAX, Git</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ DATA PROJECTS ============ -->
+  <section id="data">
+    <h2>Data Projects</h2>
+    <div class="filters" id="data-filters">
+      <label><input type="checkbox" value="python" /> Python</label>
+      <label><input type="checkbox" value="sql" /> SQL</label>
+      <label><input type="checkbox" value="excel" /> Excel</label>
+      <label><input type="checkbox" value="powerbi" /> Power BI</label>
+      
+      
+
+    <div class="projects" id="data-project-list">
+      <div class="project" data-skills="setup">
+        <a href="project1.html">
+          <h3>1. Onboarding & Soft-Skill Setup</h3>
+          <ul>
+            <li>Define Data Analyst posture</li>
+            <li>Plan training roadmap</li>
+            <li>Soft-skills: planning, curiosity</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="excel tableau storytelling">
+        <a href="project2.html">
+          <h3>2. E-Commerce Sales Analysis</h3>
+          <ul>
+            <li>Excel & Tableau dashboards</li>
+            <li>Accessibility-aware chart design</li>
+            <li>Data storytelling</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="sql">
+        <a href="project3.html">
+          <h3>3. SQL Queries for Insurance</h3>
+          <ul>
+            <li>MySQL & PostgreSQL</li>
+            <li>Data loading & modeling</li>
+            <li>Business-driven scripts</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="python r">
+        <a href="project4.html">
+          <h3>4. Public Health Study</h3>
+          <ul>
+            <li>Python (Pandas, Matplotlib) or R</li>
+            <li>Exploratory analysis</li>
+            <li>Domain insights</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="sql">
+        <a href="project5.html">
+          <h3>5. Real-Estate Database Design</h3>
+          <ul>
+            <li>SQL schema & queries</li>
+            <li>Regulatory compliance (RGPD)</li>
+            <li>Client-driven modeling</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="python r">
+        <a href="project6.html">
+          <h3>6. Retail Data Cleaning & Prep</h3>
+          <ul>
+            <li>Python or R data pipelines</li>
+            <li>Univariate & multivariate analysis</li>
+            <li>GDPR-safe cleaning</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="powerbi">
+        <a href="project7.html">
+          <h3>7. Dynamic Power BI Dashboard</h3>
+          <ul>
+            <li>Power BI report design</li>
+            <li>Interactive visuals & DAX</li>
+            <li>Decision support</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="python powerbi">
+        <a href="project8.html">
+          <h3>8. Gender Equality Metrics</h3>
+          <ul>
+            <li>Python & Power BI</li>
+            <li>Ethical data aggregation</li>
+            <li>RGPD-compliant collection</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="python r">
+        <a href="project9.html">
+          <h3>9. Bookstore Sales Forecast</h3>
+          <ul>
+            <li>Time-series in Python/R</li>
+            <li>Hypothesis testing</li>
+            <li>Forecast modeling</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="powerbi">
+        <a href="project10.html">
+          <h3>10. Water Access Dashboard</h3>
+          <ul>
+            <li>Power BI storytelling</li>
+            <li>Interactive mapping</li>
+            <li>NGO-focused design</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="python r">
+        <a href="project11.html">
+          <h3>11. Market Study (Clustering & PCA)</h3>
+          <ul>
+            <li>Python/R clustering</li>
+            <li>PCA & dimension reduction</li>
+            <li>Strategic recommendations</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="python r">
+        <a href="project12.html">
+          <h3>12. Fake Currency Detection</h3>
+          <ul>
+            <li>Supervised & unsupervised ML</li>
+            <li>Logistic regression & clustering</li>
+            <li>Model evaluation</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WEB PROJECTS ============ -->
+    <section id="web-dev-skills">
+    <h2>Core Web Developer Skills</h2>
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Soft Skills</th>
+          <th>Tools & Languages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Collaboration (UI/UX teams)<br/>SEO & accessibility awareness<br/>Debugging & problem solving<br/>Spec writing<br/>Agile planning</td>
+          <td>HTML5, CSS3, Sass<br/>JavaScript (ES6+)<br/>React, React Router<br/>Node.js, Express.js<br/>MongoDB, REST APIs<br/>Git & GitHub</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="web">
+    <h2>Web Projects</h2>
+    <div class="filters" id="web-filters">
+      <label><input type="checkbox" value="html" /> HTML</label>
+      <label><input type="checkbox" value="css" /> CSS</label>
+      <label><input type="checkbox" value="javascript" /> JavaScript</label>
+      <label><input type="checkbox" value="react" /> React</label>
+      <label><input type="checkbox" value="nodejs" /> Node.js</label>
+      <label><input type="checkbox" value="seo" /> SEO</label>
+      <label><input type="checkbox" value="git" /> Git</label>
+     
+
+    <div class="projects" id="web-project-list">
+     
+      <div class="project" data-skills="html css git">
+        <a href="web2.html">
+          <h3>2. Booki Travel Agency Home</h3>
+          <ul>
+            <li>Responsive HTML5 & CSS3</li>
+            <li>Git version control</li>
+            <li>Front-end environment</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="javascript api dom">
+        <a href="web3.html">
+          <h3>3. Dynamic Architect Site</h3>
+          <ul>
+            <li>JavaScript DOM & events</li>
+            <li>Fetch API integration</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="seo debug">
+        <a href="web4.html">
+          <h3>4. Photographer Site SEO Audit</h3>
+          <ul>
+            <li>Performance optimization</li>
+            <li>Chrome DevTools debugging</li>
+            <li>Accessibility & SEO</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="react">
+        <a href="web5.html">
+          <h3>5. Kasa Rental App (React)</h3>
+          <ul>
+            <li>Create React App</li>
+            <li>React Router & components</li>
+            <li>CSS animations & Sass</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="nodejs mongodb">
+        <a href="web6.html">
+          <h3>6. Book Rating API (Node.js)</h3>
+          <ul>
+            <li>Express.js server</li>
+            <li>MongoDB modeling</li>
+            <li>CRUD & secure storage</li>
+          </ul>
+        </a>
+      </div>
+      <div class="project" data-skills="project-management agile">
+        <a href="web7.html">
+          <h3>7. Project Planning Doc</h3>
+          <ul>
+            <li>Agile backlog & specs</li>
+            <li>Tech proposal & tracking</li>
+          </ul>
+        </a>
+      </div>
+     
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Email: <a href="mailto:ruben@kraan.fr">ruben@kraan.fr</a> | Phone: +33 6 08 87 27 59</p>
+    <p><a href="CV_2025-06-29_Ruben_Kraan.pdf" download>Download CV (PDF)</a></p>
+  </footer>
+
+  <script>
+    function setupFilter(filterId, listId) {
+      const checks = document.querySelectorAll(`#${filterId} input[type=checkbox]`);
+      const items  = document.querySelectorAll(`#${listId} .project`);
+      checks.forEach(chk => chk.addEventListener('change', () => {
+        const active = Array.from(checks).filter(c=>c.checked).map(c=>c.value);
+        items.forEach(item => {
+          const skills = item.dataset.skills.split(' ');
+          const show = active.length === 0 
+            ? true 
+            : active.every(f=>skills.includes(f));
+          item.style.display = show ? 'block' : 'none';
+        });
+      }));
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      setupFilter('data-filters', 'data-project-list');
+      setupFilter('web-filters',  'web-project-list');
+    });
+  </script>
+</body>
+</html>
