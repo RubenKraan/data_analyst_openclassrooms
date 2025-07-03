@@ -157,7 +157,7 @@ header nav ul li a:focus {
   .bar-container {
     display: flex;
     align-items: center;
-    background-color: #eee;
+    background-color: #fff;
     position: relative;
     height: 25px;
   }
@@ -165,11 +165,11 @@ header nav ul li a:focus {
     position: absolute;
     height: 100%;
     background-color: #4285f4;
-    color: white;
+    color: black;
     font-size: 12px;
     text-align: center;
     line-height: 25px;
-    overflow: hidden;
+    
     white-space: nowrap;}
    
 
@@ -188,6 +188,37 @@ header nav ul li a:focus {
     display: block;
     width: 100%;
     padding: 0.6rem 0;
+  }
+  
+  .skills-table thead {
+    display: none;
+  }
+  .skills-table, .skills-table tbody, .skills-table tr, .skills-table td {
+    display: block;
+    width: 100%;
+  }
+  .skills-table tr {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e9d8a6;
+  }
+  .skills-table td {
+    border: none;
+    padding: 0.7rem 0.5rem;
+    position: relative;
+  }
+  .skills-table td:first-child::before {
+    content: "Compétences humaines";
+    display: block;
+    font-weight: bold;
+    color: #0a9396;
+    margin-bottom: 0.3rem;
+  }
+  .skills-table td:last-child::before {
+    content: "Outils & langages";
+    display: block;
+    font-weight: bold;
+    color: #0a9396;
+    margin-bottom: 0.3rem;
   }
 }
   </style>
@@ -395,7 +426,7 @@ header nav ul li a:focus {
 
       <div class="project" data-skills="powerbi">
         <a href="project10.html">
-          <h3>10. Tableau de bord accès à l'eau</h3>
+          <h3>10. Tableau de bord: accès à l'eau</h3>
           <ul>
             <li>Storytelling Power BI</li>
             <li>Cartographie interactive</li>
